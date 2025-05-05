@@ -63,6 +63,34 @@
             <input type="password" placeholder="Password" required>
             <button type="submit" onclick="validateLogin(); return false;">Login</button>
             <script>
+    function validateLogin() {
+        const emailInput = document.querySelector('input[type="email"]');
+        const passwordInput = document.querySelector('input[type="password"]');
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (password === "") {
+            alert("Password cannot be empty.");
+            return;
+        }
+
+        // Show a loading message
+        alert("Logging in... Please wait.");
+
+        // Delay the redirection for 2 seconds
+        setTimeout(() => {
+            window.location.href = 'index4.html';
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+</script>
+            <script>
                 function validateLogin() {
                     const emailInput = document.querySelector('input[type="email"]');
                     const passwordInput = document.querySelector('input[type="password"]');
