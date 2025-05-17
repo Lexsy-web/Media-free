@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 1rem;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1, h2 {
+    color: #555;
+  }
+  
+  /* Upload Section */
+  #upload-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #upload-section input {
+    margin-bottom: 1rem;
+  }
+  
+  #upload-section button {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #upload-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Gallery Section */
+  #gallery-section {
+    margin-top: 2rem;
+  }
+  
+  #imageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .image-item {
+    position: relative;
+    text-align: center;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .image-item button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .image-item .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .image-item .delete-btn:hover {
+    background-color: #a71d2a;
+  }
+  
+  .image-item .download-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .image-item .download-btn:hover {
+    background-color: #19692c;
+  }
