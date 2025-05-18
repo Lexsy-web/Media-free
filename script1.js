@@ -2,35 +2,44 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 
-sendBtn.addEventListener('click', handleSend);
-userInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        handleSend();
-    }
-});
-
-async function handleSend() {
+sendBtn.addEventListener('click', () => {
     const userMessage = userInput.value.trim();
     if (userMessage) {
-        addMessage(`You: ${userMessage}`, 'user');
-        const botResponse = await getBotResponse(userMessage);
-        setTimeout(() => {
-            addMessage(`Bot: ${botResponse}`, 'bot');
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }, 400);
+        const userDiv = document.createElement('div');
+        userDiv.classList.add('message');
+        userDiv.innerText = `You: ${userMessage}`;
+        chatBox.appendChild(userDiv);
+
+        const botResponse = getBotResponse(userMessage);
+        const botDiv = document.createElement('div');
+        botDiv.classList.add('message');
+        botDiv.innerText = `Bot: ${botResponse}`;
+        chatBox.appendChild(botDiv);
+
         userInput.value = '';
         chatBox.scrollTop = chatBox.scrollHeight;
     }
+});
+
+function getBotResponse(message) {
+    if (message.toLowerCase().includes('hello')) {
+        return 'Hello! How are you?';
+    } else if (message.toLowerCase().includes('goodbye')) {
+        return 'Goodbye! See you later.';
+    } else {
+        return 'I didn\'t understand that.';
+    }
 }
 
-function addMessage(text, sender) {
-    const div = document.createElement('div');
-    div.classList.add('message', sender);
-    div.innerText = text;
-    chatBox.appendChild(div);
+
+function getBotResponse(message) {
+    if (message.toLowerCase().includes('who is lekan girlfriend')) {
+        return 'michelle ';
+    } else if (message.toLowerCase().includes('are you sure')) {
+        return 'ohh, sorry for my mistake, i am not sure about that but l think it is penda because he talks about penda alot, i think his girfriend is penda.';
+    } else {
+        return 'I didn\'t understand that.';
+    }
 }
 
-// Async function to get response from your AI endpoint
-async function getBotResponse(message) {
-    const apiUrl = 'https://your-ai-endpoint.com/v1/chat/completions
-
+
