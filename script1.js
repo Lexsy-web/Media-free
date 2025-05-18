@@ -33,11 +33,11 @@ function getBotResponse(message) {
 
 
 function getBotResponse(message) {
-    if (message.toLowerCase().includes('')) {
-        return '';
-    } else if (message.toLowerCase().includes('')) {
-        return '';
+    if (message.toLowerCase().includes('who is lekan girlfriend')) {
+        return 'michelle';
+    } else if (message.toLowerCase().includes('are you sure')) {
+        return 'ohh, sorry for my misunderstanding, you are is girlfriend. penda';
     } else {
-        return '';
+        return 'I don\'t understand that';
     }
 }
