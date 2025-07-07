@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Chatbot Button -->
+    <a href="index2.html" id="chatbotButton" style="position: absolute; top: 20px; right: 20px; z-index: 1000;">
+        <button>Chatbot</button>
+      </a>
+ <h2 id="welcome-message"></h2>
+    <header>
+        <h1>ImageHub</h1>
+    </header>
+    <main>
+        <!-- Image Upload Section -->
+        <section id="upload-section">
+            <h2>Post an Image</h2>
+            <input type="file" id="imageUpload" accept="image/*" >
+            <button id="uploadButton">Upload</button>
+        </section>
+        <!-- Image Grid Section -->
+        <section id="gallery-section">
+            <h2>Hub</h2>
+            <div id="imageGrid"></div>
+        </section>
+        <!-- Comment Section -->
+        <section id="comment-section" style="display: none;">
+            <h2>Comments</h2>
+            <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+            <button id="postCommentButton">Post Comment</button>
+            <div id="commentsContainer"></div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcome-message').innerText = `Welcome ${username}`;
+            } else {
+                document.getElementById('welcome-message').innerText = 'Welcome Guest'
+            }
+        });
+    </script>
+    <script src="script.js" ></script>
+</body>
+</html>

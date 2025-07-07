@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-bot</title>
+    <link rel="stylesheet" href="syles.css">
+</head>
+<body>
+    <h2 id="welcome-message"></h2>
+    <!-- Lexsy-gaming Button -->
+    <a href="index3.html" id="Lexsy-gaming" style="position: absolute; top: 20px; right: 20px; z-index: 1000;">
+        <button>Lexsy-gaming</button>
+      </a>
+    <div class="chat-container">
+        <div id="chat-box">
+            <div class="message">Hello! I'm your chatbot.</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type a message...">  
+        <button id="send-btn">Send</button>
+    </div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('welcome-message').innerText = `Welcome ${username}`;
+            } else {
+                document.getElementById('welcome-message').innerText = 'Welcome Guest'
+            }
+        });
+    </script>
+    <script src="script1.js"></script>
+</body>
+</html>
+
