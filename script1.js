@@ -36,11 +36,12 @@ function getBotResponse(message) {
     if (message.toLowerCase().includes('who is lekan girlfriend')) {
         return 'teniola ';
     } else if (message.toLowerCase().includes('are you sure')) {
-        return 'i don't know yet .';
+        return ' hmmmmm ';
     } else {
         return 'I didn\'t understand that.';
     }
 }
+
 
 
 
