@@ -34,12 +34,13 @@ function getBotResponse(message) {
 
 function getBotResponse(message) {
     if (message.toLowerCase().includes('who is lekan girlfriend')) {
-        return 'michelle ';
+        return 'teniola ';
     } else if (message.toLowerCase().includes('are you sure')) {
-        return 'ohh, sorry for my mistake, i am not sure about that but l think it is penda because he talks about penda alot, i think his girfriend is penda.';
+        return 'i don't know yet .';
     } else {
         return 'I didn\'t understand that.';
     }
 }
+
 
 
