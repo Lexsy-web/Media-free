@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+            
+            .container {
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+                padding: 40px;
+                max-width: 450px;
+                width: 100%;
+            }
+            
+            h1 {
+                color: #333;
+                margin-bottom: 30px;
+                text-align: center;
+                font-size: 28px;
+            }
+            
+            label {
+                display: block;
+                color: #555;
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            
+            input {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                font-size: 14px;
+                transition: border-color 0.3s;
+            }
+            
+            input:focus {
+                outline: none;
+                border-color: #667eea;
+            }
+            
+            button {
+                width: 100%;
+                padding: 12px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            
+            button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            }
+            
+            button:active {
+                transform: translateY(0);
+            }
+            
+            #confirmSection p {
+                color: #666;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 16px;
+            }
+        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit to Spin Wheel</title>
+    <script>
+        function handleDeposit() {
+            const name = document.getElementById('name').value;
+            const amount = document.getElementById('amount').value;
+            if (name && amount) {
+                alert(`${name}, please do a bank transfer of ${amount} to account 9057310779 (Opay). Other payment methods are coming soon.`);
+                document.getElementById('depositForm').style.display = 'none';
+                document.getElementById('confirmSection').style.display = 'block';
+            } else {
+                alert('Please enter your name and amount.');
+            }
+        }
+
+        function confirmPayment() {
+            alert('Confirming your payment...');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Deposit to Spin Wheel</h1>
+    
+    <div id="depositForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+        <label for="amount">Amount to deposit:</label>
+        <input type="number" id="amount" required>
+        <br><br>
+        <button onclick="handleDeposit()">Submit</button>
+    </div>
+
+    <div id="confirmSection" style="display: none;">
+        <p>Please complete the bank transfer and click the button below:</p>
+        <button onclick="confirmPayment()">Confirm Payment</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e3c72, #0f2027);
+  color: white;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #000, #111);
+  padding: 25px;
+}
+
+.sidebar h2 {
+  color: #00ff99;
+}
+
+.sidebar a {
+  display: block;
+  color: #00ff99;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 17px;
+  background: #00ff99;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* SIMPLE PAGES */
+.simple-page {
+  text-align: center;
+  padding-top: 100px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+}
+
+/* WHEEL */
+.wheel-box {
+  position: relative;
+  width: 380px;
+  margin: 40px auto;
+}
+
+.pointer {
+  font-size: 45px;
+  color: gold;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wheel {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 12px solid gold;
+  background: conic-gradient(
+    #ff7675 0deg 60deg,
+    #74b9ff 60deg 120deg,
+    #55efc4 120deg 180deg,
+    #ffeaa7 180deg 240deg,
+    #a29bfe 240deg 300deg,
+    #fd79a8 300deg 360deg
+  );
+  position: relative;
+  transition: transform 4s cubic-bezier(.17,.67,.35,1.2);
+}
+
+.wheel span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: left center;
+  font-weight: bold;
+  font-size: 18px;
+}

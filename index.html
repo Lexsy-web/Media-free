@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coin Spin Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE -->
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="deposit.html">➕ Deposit</a>
+    <a href="withdraw.html">➖ Withdraw</a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="main">
+    <h2>Coin Balance</h2>
+    <h1 id="balance">0</h1>
+
+    <div class="wheel-box">
+      <div class="pointer">▼</div>
+      <div id="wheel" class="wheel">
+        <span style="transform: rotate(0deg)">100</span>
+        <span style="transform: rotate(60deg)">200</span>
+        <span style="transform: rotate(120deg)">50</span>
+        <span style="transform: rotate(180deg)">500</span>
+        <span style="transform: rotate(240deg)">1000</span>
+        <span style="transform: rotate(300deg)">5000</span>
+      </div>
+    </div>
+
+    <button onclick="spin()">🎡 Spin (100 coins)</button>
+    <p id="result"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
