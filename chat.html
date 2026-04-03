@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codechat - Chat Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="chat-card">
+    <header class="chat-header">
+      <h1 id="roomTitle">Room </h1>
+      <span id="statusLabel" class="badge">Connecting...</span>
+    </header>
+
+    <p id="typingStatus" class="status" style="margin-top:0.6rem; background: #142124; border-left-color:#34d399;"> </p>
+
+    <section class="members">
+      <strong>Participants</strong>
+      <ul id="participants" class="participants"></ul>
+    </section>
+
+    <section id="chatLog" class="chat-log"></section>
+
+    <form id="messageForm" class="message-form">
+      <input id="messageInput" type="text" placeholder="Type a message" autocomplete="off" maxlength="400" />
+      <button type="submit">Send</button>
+    </form>
+
+    <button id="clearChatBtn" class="small-button">Clear chat history</button>
+    <p><a href="index.html">Back to join page</a></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codechat - Join Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Codechat - Join a Room</h1>
+    <p>Enter a chat code (default 1234 if blank), then wait for a partner to join.</p>
+
+    <label for="roomCode">Chat code</label>
+    <input id="roomCode" type="text" value="1234" maxlength="10" autocomplete="off" />
+
+    <label for="userName">Your display name</label>
+    <input id="userName" type="text" value="User" maxlength="30" autocomplete="off" />
+
+    <button id="joinBtn">Enter Waiting Room</button>
+
+    <div id="status" class="status">Waiting for code and name...</div>
+
+    <div class="hint">
+      Open this page in two tabs and use the same code in both to connect (1234 by default). You can use any code you like.
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
